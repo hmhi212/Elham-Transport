@@ -766,7 +766,203 @@
     <!-- Services Section -->
     <section id="services">
         <div class="section-label">Nos Services</div>
-        <h2 class="section-title">Transport Premium pour Tous Vos Besoins</h2>
+        <h2 class="section-title">Réservez Votre Course en 2 Minutes</h2>
+        <p class="section-subtitle">Remplissez le formulaire ci-dessous et nous vous confirmerons votre réservation immédiatement.</p>
+
+        <div class="booking-container">
+            <form class="booking-form" onsubmit="event.preventDefault(); alert('Merci pour votre réservation ! Notre équipe vous contactera sous peu pour confirmation.');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Nombre de passagers</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="">Sélectionner</option>
+                            <option value="1">1 passager</option>
+                            <option value="2">2 passagers</option>
+                            <option value="3">3 passagers</option>
+                            <option value="4">4 passagers</option>
+                            <option value="5+">5+ passagers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup">Adresse de départ</label>
+                    <input type="text" id="pickup" name="pickup" placeholder="Adresse complète" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Adresse complète" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Heure</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle">Type de véhicule</label>
+                    <select id="vehicle" name="vehicle" required>
+                        <option value="">Sélectionner</option>
+                        <option value="business">Berline Affaires</option>
+                        <option value="premium">Berline Premium</option>
+                        <option value="van">Van (Groupe)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Informations complémentaires</label>
+                    <textarea id="notes" name="notes" placeholder="Bagages spéciaux, demandes particulières..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirmer la Réservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Nous Joindre</h2>
+        <p class="section-subtitle">Notre équipe est disponible 24h/24 pour répondre à toutes vos questions.</p>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+33612345678">06 12 34 56 78</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@elhamtransport.fr">contact@elhamtransport.fr</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Adresse</h3>
+                    <p>Bordeaux, France<br>Service disponible dans toute la région</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Horaires</h3>
+                    <p>Service 24h/24, 7j/7<br>Réservation et support client</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46068.53719739853!2d-0.6309646!3d44.841225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sfr!2sfr!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ELHAM TRANSPORT</h3>
+                <p>Service VTC premium à Bordeaux. Votre chauffeur privé de confiance pour tous vos déplacements.</p>
+                <p style="margin-top: 1rem; color: var(--accent);">Disponible 24/7</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Courses Urbaines</a></li>
+                    <li><a href="#services">Transferts Aéroport</a></li>
+                    <li><a href="#services">Transport Affaires</a></li>
+                    <li><a href="#services">Événements</a></li>
+                    <li><a href="#services">Longues Distances</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul class="footer-links">
+                    <li><a href="#fleet">Notre Flotte</a></li>
+                    <li><a href="#why">Pourquoi Nous</a></li>
+                    <li><a href="#booking">Tarifs</a></li>
+                    <li><a href="#">Devenir Chauffeur</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+33612345678">06 12 34 56 78</a></li>
+                    <li><a href="mailto:contact@elhamtransport.fr">contact@elhamtransport.fr</a></li>
+                    <li><a href="#contact">Bordeaux, France</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elham Transport. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Mentions Légales</a>
+                <a href="#">CGV</a>
+                <a href="#">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Set min date for booking form to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+    </script>
+</body>
+</html>Transport Premium pour Tous Vos Besoins</h2>
         <p class="section-subtitle">Du trajet quotidien aux occasions spéciales, nous assurons un service de qualité supérieure adapté à chaque situation.</p>
 
         <div class="services-grid">
