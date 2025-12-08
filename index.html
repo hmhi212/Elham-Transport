@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elham Transport - Service VTC premium à Bordeaux. Réservez votre chauffeur privé en quelques clics. Confort, ponctualité, professionnalisme.">
+    <meta name="keywords" content="vtc bordeaux, chauffeur privé, transport premium, taxi bordeaux, réservation vtc">
+    <title>Elham Transport | VTC Premium Bordeaux</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --dark: #0a0a0a;
+            --white: #ffffff;
+            --gray: #1a1a1a;
+            --light-gray: #8a8a8a;
+            --accent: #00d9ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .cta-btn {
+            background: var(--white);
+            color: var(--black);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=80') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: var(--light-gray);
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--black);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 8rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 5rem;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Section */
+        #services {
+            background: var(--dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--gray);
+            padding: 3rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--light-gray);
+            line-height: 1.7;
+        }
+
+        /* Fleet Section */
+        #fleet {
+            background: var(--black);
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .fleet-card {
+            background: var(--gray);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .fleet-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+
+        .fleet-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .fleet-content {
+            padding: 2rem;
+        }
+
+        .fleet-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .fleet-content .vehicle-type {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .fleet-content p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .fleet-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Why Choose Section */
+        #why {
+            background: var(--dark);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .why-item p {
+            color: var(--light-gray);
+            line-height: 1.7;
+        }
+
+        /* Booking Section */
+        #booking {
+            background: var(--black);
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--gray);
+            padding: 4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .booking-form {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1rem;
+            background: var(--dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--white);
+            color: var(--black);
+            padding: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: scale(1.02);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--gray);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .info-item p {
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .info-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-item a:hover {
+            color: var(--accent);
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(1) invert(1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 4rem 3rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: var(--light-gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: var(--gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--white);
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: var(--gray);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--light-gray);
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: var(--black);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-container {
+                padding: 2rem;
+            }
+
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            section {
+                padding: 5rem 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">ELHAM TRANSPORT</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Véhicules</a></li>
+                <li><a href="#why">Pourquoi Nous</a></li>
+                <li><a href="#booking">Réserver</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="cta-btn">Réserver Maintenant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Votre Chauffeur Privé Premium à Bordeaux</h1>
+            <p>Transport VTC de luxe. Ponctualité garantie. Service impeccable.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">Réserver une Course</a>
+                <a href="#fleet" class="btn-secondary">Découvrir nos Véhicules</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-label">Nos Services</div>
+        <h2 class="section-title">Transport Premium pour Tous Vos Besoins</h2>
+        <p class="section-subtitle">Du trajet quotidien aux occasions spéciales, nous assurons un service de qualité supérieure adapté à chaque situation.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Courses Urbaines</h3>
+                <p>Déplacements rapides et confortables dans Bordeaux et sa région. Disponible 24h/24, 7j/7 pour tous vos trajets quotidiens.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Transferts Aéroport</h3>
+                <p>Service d'accueil personnalisé et prise en charge directe. Bordeaux-Mérignac et tous les aéroports régionaux.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Transport Affaires</h3>
+                <p>Solution professionnelle pour vos rendez-vous d'affaires. Discrétion, ponctualité et confort garantis.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h3>Événements Spéciaux</h3>
+                <p>Mariages, soirées, événements d'entreprise. Un service premium pour vos occasions exceptionnelles.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚆</div>
+                <h3>Transferts Gares</h3>
+                <p>Connexion directe avec les gares de Bordeaux. Service ponctuel pour ne jamais manquer votre train.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌍</div>
+                <h3>Longues Distances</h3>
+                <p>Voyages vers d'autres villes et régions dans le confort et la sérénité. Tarifs compétitifs.</p>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">5,000+</div>
+                <div class="stat-label">Courses réalisées</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Disponibilité</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10 min</div>
+                <div class="stat-label">Temps d'arrivée moyen</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet">
+        <div class="section-label">Notre Flotte</div>
+        <h2 class="section-title">Véhicules Premium</h2>
+        <p class="section-subtitle">Une sélection de véhicules haut de gamme, entretenus méticuleusement pour votre confort et votre sécurité.</p>
+
+        <div class="fleet-grid">
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80" alt="Berline Premium" class="fleet-image">
+                <div class="fleet-content">
+                    <div class="vehicle-type">Berline</div>
+                    <h3>Classe Affaires</h3>
+                    <p>Mercedes Classe E, BMW Série 5. Parfait pour vos déplacements professionnels et trajets quotidiens en ville.</p>
+                    <div class="fleet-features">
+                        <span class="feature-tag">4 passagers</span>
+                        <span class="feature-tag">3 bagages</span>
+                        <span class="feature-tag">Climatisation</span>
+                        <span class="feature-tag">WiFi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80" alt="Berline Luxe" class="fleet-image">
+                <div class="fleet-content">
+                    <div class="vehicle-type">Berline Luxe</div>
+                    <h3>Classe Premium</h3>
+                    <p>Mercedes Classe S, BMW Série 7. Le summum du luxe et du confort pour vos occasions spéciales.</p>
+                    <div class="fleet-features">
+                        <span class="feature-tag">4 passagers</span>
+                        <span class="feature-tag">3 bagages</span>
+                        <span class="feature-tag">Sièges massage</span>
+                        <span class="feature-tag">WiFi Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80" alt="Van Premium" class="fleet-image">
+                <div class="fleet-content">
+                    <div class="vehicle-type">Van</div>
+                    <h3>Classe Groupe</h3>
+                    <p>Mercedes Viano, Volkswagen Caravelle. Idéal pour les groupes et les transferts avec bagages volumineux.</p>
+                    <div class="fleet-features">
+                        <span class="feature-tag">7 passagers</span>
+                        <span class="feature-tag">8 bagages</span>
+                        <span class="feature-tag">Espace XXL</span>
+                        <span class="feature-tag">Confort optimal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why">
+        <div class="section-label">Pourquoi Elham Transport</div>
+        <h2 class="section-title">Excellence et Professionnalisme</h2>
+        <p class="section-subtitle">Notre engagement : vous offrir la meilleure expérience de transport possible.</p>
+
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">⏱️</div>
+                <h3>Ponctualité Garantie</h3>
+                <p>Nous respectons vos horaires. Arrivée dans les 10 minutes suivant votre réservation.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">👔</div>
+                <h3>Chauffeurs Professionnels</h3>
+                <p>Formés, expérimentés et courtois. Carte professionnelle VTC et assurance complète.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">💎</div>
+                <h3>Véhicules Premium</h3>
+                <p>Flotte récente et entretenue. Confort maximal pour tous vos trajets.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">💰</div>
+                <h3>Tarifs Transparents</h3>
+                <p>Prix fixes annoncés à la réservation. Aucune surprise, aucun frais caché.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">📱</div>
+                <h3>Réservation Simple</h3>
+                <p>En ligne, par téléphone ou par SMS. Confirmation immédiate de votre course.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">🌟</div>
+                <h3>Service Client</h3>
+                <p>Support disponible 24/7. Nous sommes à votre écoute à tout moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="section-label">Réservation</div>
+        <h2 class="section-title">
