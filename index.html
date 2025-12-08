@@ -524,8 +524,8 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
             margin-bottom: 3rem;
         }
 
@@ -742,7 +742,6 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#fleet">Véhicules</a></li>
                 <li><a href="#why">Pourquoi Nous</a></li>
                 <li><a href="#booking">Réserver</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -758,7 +757,7 @@
             <p>Transport VTC de luxe. Ponctualité garantie. Service impeccable.</p>
             <div class="hero-buttons">
                 <a href="#booking" class="btn-primary">Réserver une Course</a>
-                <a href="#fleet" class="btn-secondary">Découvrir nos Véhicules</a>
+                <a href="#contact" class="btn-secondary">Nous Contacter</a>
             </div>
         </div>
     </section>
@@ -770,7 +769,7 @@
         <p class="section-subtitle">Remplissez le formulaire ci-dessous et nous vous confirmerons votre réservation immédiatement.</p>
 
         <div class="booking-container">
-            <form class="booking-form" onsubmit="event.preventDefault(); alert('Merci pour votre réservation ! Notre équipe vous contactera sous peu pour confirmation.');">
+            <form class="booking-form" id="bookingForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
@@ -795,7 +794,6 @@
                             <option value="2">2 passagers</option>
                             <option value="3">3 passagers</option>
                             <option value="4">4 passagers</option>
-                            <option value="5+">5+ passagers</option>
                         </select>
                     </div>
                 </div>
@@ -822,16 +820,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="vehicle">Type de véhicule</label>
-                    <select id="vehicle" name="vehicle" required>
-                        <option value="">Sélectionner</option>
-                        <option value="business">Berline Affaires</option>
-                        <option value="premium">Berline Premium</option>
-                        <option value="van">Van (Groupe)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="notes">Informations complémentaires</label>
                     <textarea id="notes" name="notes" placeholder="Bagages spéciaux, demandes particulières..."></textarea>
                 </div>
@@ -851,26 +839,26 @@
             <div class="contact-info">
                 <div class="info-item">
                     <h3>Téléphone</h3>
-                    <p><a href="tel:+33612345678">06 12 34 56 78</a></p>
+                    <p><a href="tel:0619930724">06 19 93 07 24</a></p>
                 </div>
 
                 <div class="info-item">
                     <h3>Email</h3>
-                    <p><a href="mailto:contact@elhamtransport.fr">contact@elhamtransport.fr</a></p>
+                    <p><a href="mailto:hatem.stage@gmail.com">hatem.stage@gmail.com</a></p>
                 </div>
 
                 <div class="info-item">
                     <h3>Adresse</h3>
-                    <p>Bordeaux, France<br>Service disponible dans toute la région</p>
+                    <p>Bordeaux et sa région<br>Service disponible 24h/24</p>
                 </div>
 
                 <div class="info-item">
-                    <h3>Horaires</h3>
-                    <p>Service 24h/24, 7j/7<br>Réservation et support client</p>
+                    <h3>Véhicule</h3>
+                    <p>Toyota Prius Hybride<br>Confort, économie et écologie</p>
                 </div>
 
                 <div class="info-item">
-                    <h3>Suivez-nous</h3>
+                    <h3>Réseaux Sociaux</h3>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook">f</a>
                         <a href="#" aria-label="Instagram">📷</a>
@@ -908,20 +896,20 @@
             <div class="footer-section">
                 <h3>Informations</h3>
                 <ul class="footer-links">
-                    <li><a href="#fleet">Notre Flotte</a></li>
                     <li><a href="#why">Pourquoi Nous</a></li>
-                    <li><a href="#booking">Tarifs</a></li>
-                    <li><a href="#">Devenir Chauffeur</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#booking">Réserver</a></li>
+                    <li><a href="#services">Nos Services</a></li>
+                    <li><a href="#">Tarifs</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Contact</h3>
                 <ul class="footer-links">
-                    <li><a href="tel:+33612345678">06 12 34 56 78</a></li>
-                    <li><a href="mailto:contact@elhamtransport.fr">contact@elhamtransport.fr</a></li>
-                    <li><a href="#contact">Bordeaux, France</a></li>
+                    <li><a href="tel:0619930724">06 19 93 07 24</a></li>
+                    <li><a href="mailto:hatem.stage@gmail.com">hatem.stage@gmail.com</a></li>
+                    <li>Bordeaux et région</li>
                 </ul>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook">f</a>
@@ -960,6 +948,42 @@
             const today = new Date().toISOString().split('T')[0];
             dateInput.setAttribute('min', today);
         }
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const passengers = document.getElementById('passengers').value;
+            const pickup = document.getElementById('pickup').value;
+            const destination = document.getElementById('destination').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const notes = document.getElementById('notes').value;
+            
+            // Format message for SMS
+            const message = `NOUVELLE RÉSERVATION VTC%0A%0ANom: ${name}%0ATél: ${phone}%0AEmail: ${email}%0APassagers: ${passengers}%0A%0ADépart: ${pickup}%0ADestination: ${destination}%0ADate: ${date}%0AHeure: ${time}%0A%0ANotes: ${notes}`;
+            
+            // Send SMS via tel: link (will open messaging app on mobile)
+            window.location.href = `sms:0619930724?body=${message}`;
+            
+            // Also send email as backup
+            const emailSubject = `Nouvelle réservation VTC - ${name}`;
+            const emailBody = `NOUVELLE RÉSERVATION VTC%0A%0ANom: ${name}%0ATéléphone: ${phone}%0AEmail: ${email}%0ANombre de passagers: ${passengers}%0A%0AAdresse de départ: ${pickup}%0ADestination: ${destination}%0ADate: ${date}%0AHeure: ${time}%0A%0AInformations complémentaires: ${notes}`;
+            
+            setTimeout(() => {
+                window.location.href = `mailto:hatem.stage@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+            }, 1000);
+            
+            // Show confirmation
+            alert('Merci pour votre réservation ! Votre demande va être envoyée par SMS et email. Nous vous contacterons rapidement pour confirmation.');
+            
+            // Reset form
+            this.reset();
+        });
     </script>
 </body>
 </html>Transport Premium pour Tous Vos Besoins</h2>
@@ -1019,60 +1043,6 @@
             <div class="stat-item">
                 <div class="stat-number">10 min</div>
                 <div class="stat-label">Temps d'arrivée moyen</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fleet Section -->
-    <section id="fleet">
-        <div class="section-label">Notre Flotte</div>
-        <h2 class="section-title">Véhicules Premium</h2>
-        <p class="section-subtitle">Une sélection de véhicules haut de gamme, entretenus méticuleusement pour votre confort et votre sécurité.</p>
-
-        <div class="fleet-grid">
-            <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80" alt="Berline Premium" class="fleet-image">
-                <div class="fleet-content">
-                    <div class="vehicle-type">Berline</div>
-                    <h3>Classe Affaires</h3>
-                    <p>Mercedes Classe E, BMW Série 5. Parfait pour vos déplacements professionnels et trajets quotidiens en ville.</p>
-                    <div class="fleet-features">
-                        <span class="feature-tag">4 passagers</span>
-                        <span class="feature-tag">3 bagages</span>
-                        <span class="feature-tag">Climatisation</span>
-                        <span class="feature-tag">WiFi</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80" alt="Berline Luxe" class="fleet-image">
-                <div class="fleet-content">
-                    <div class="vehicle-type">Berline Luxe</div>
-                    <h3>Classe Premium</h3>
-                    <p>Mercedes Classe S, BMW Série 7. Le summum du luxe et du confort pour vos occasions spéciales.</p>
-                    <div class="fleet-features">
-                        <span class="feature-tag">4 passagers</span>
-                        <span class="feature-tag">3 bagages</span>
-                        <span class="feature-tag">Sièges massage</span>
-                        <span class="feature-tag">WiFi Premium</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80" alt="Van Premium" class="fleet-image">
-                <div class="fleet-content">
-                    <div class="vehicle-type">Van</div>
-                    <h3>Classe Groupe</h3>
-                    <p>Mercedes Viano, Volkswagen Caravelle. Idéal pour les groupes et les transferts avec bagages volumineux.</p>
-                    <div class="fleet-features">
-                        <span class="feature-tag">7 passagers</span>
-                        <span class="feature-tag">8 bagages</span>
-                        <span class="feature-tag">Espace XXL</span>
-                        <span class="feature-tag">Confort optimal</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
