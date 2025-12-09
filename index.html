@@ -1,823 +1,2687 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
+   <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     
+
     <title>Elham Transport VTC | Chauffeur Privé Premium à Bordeaux (24/7)</title>
+
     <meta name="description" content="Réservez votre VTC premium à Bordeaux et en Gironde. Chauffeur privé, ponctualité garantie, transferts aéroports/gares, service disponible 24h/24.">
+
     <link rel="canonical" href="https://hmhi212.github.io/Elham-Transport/">
+
     <meta name="keywords" content="VTC Bordeaux, chauffeur privé Bordeaux, transport VTC premium, réservation chauffeur, navette aéroport Mérignac, VTC Gare Saint-Jean, transport professionnel Bordeaux, voiture avec chauffeur, service VTC Gironde, transport de luxe, taxi privé, VTC 24/7">
+
     <meta property="og:title" content="Elham Transport VTC | Chauffeur Privé Premium Bordeaux 24/7">
+
     <meta property="og:description" content="Réservez votre VTC premium à Bordeaux et en Gironde. Chauffeur privé, ponctualité garantie, transferts aéroports/gares, service disponible 24h/24.">
+
     <meta property="og:type" content="website">
+
     <meta property="og:image" content="https://images.unsplash.com/photo-1629858348612-a7408f656209?w=800&q=80">
+
     <meta property="og:url" content="https://hmhi212.github.io/Elham-Transport/">
 
+
+
     <meta name="twitter:card" content="summary_large_image">
+
     <meta name="twitter:title" content="Elham Transport VTC | Chauffeur Privé Premium Bordeaux 24/7">
+
     <meta name="twitter:description" content="Réservez votre VTC premium à Bordeaux et en Gironde. Chauffeur privé, ponctualité garantie, transferts aéroports/gares, service disponible 24h/24.">
+
     
+
     <style>
+
+
+
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
+
 
         :root {
+
             --black: #000000;
+
             --dark: #0a0a0a;
+
             --white: #ffffff;
+
             --gray: #1a1a1a;
+
             --light-gray: #8a8a8a;
+
             --accent: #00d9ff;
+
         }
+
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
+
 
         body {
+
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
             background: var(--black);
+
             color: var(--white);
+
             line-height: 1.6;
+
             overflow-x: hidden;
+
         }
+
+
 
         /* Header */
+
         header {
+
             position: fixed;
+
             top: 0;
+
             width: 100%;
+
             background: rgba(0, 0, 0, 0.95);
+
             backdrop-filter: blur(20px);
+
             z-index: 1000;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
         }
+
+
 
         nav {
+
             max-width: 1400px;
+
             margin: 0 auto;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             padding: 1.5rem 3rem;
+
         }
+
+
 
         .logo {
+
             font-size: 1.8rem;
+
             font-weight: 700;
+
             color: var(--white);
+
             text-decoration: none;
+
             letter-spacing: -1px;
+
         }
+
+
 
         .nav-links {
+
             display: flex;
+
             gap: 3rem;
+
             list-style: none;
+
             align-items: center;
+
         }
+
+
 
         .nav-links a {
+
             color: var(--light-gray);
+
             text-decoration: none;
+
             font-weight: 500;
+
             font-size: 0.95rem;
+
             transition: color 0.3s;
+
         }
+
+
 
         .nav-links a:hover {
+
             color: var(--white);
+
         }
+
+
 
         .cta-btn {
+
             background: var(--white);
+
             color: var(--black);
+
             padding: 0.8rem 1.8rem;
+
             border-radius: 50px;
+
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 0.95rem;
+
             transition: all 0.3s;
+
         }
+
+
 
         .cta-btn:hover {
+
             background: var(--accent);
+
             transform: scale(1.05);
+
         }
+
+
 
         .menu-toggle {
+
             display: none;
+
             flex-direction: column;
+
             cursor: pointer;
+
             gap: 5px;
+
         }
+
+
 
         .menu-toggle span {
+
             width: 25px;
+
             height: 2px;
+
             background: var(--white);
+
             transition: 0.3s;
+
         }
+
+
 
         /* Hero Section */
+
         #home {
+
             min-height: 100vh;
+
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-                         url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=80') center/cover fixed;
+
+                        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=80') center/cover fixed;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             text-align: center;
+
             padding: 2rem;
+
             margin-top: 80px;
+
             position: relative;
+
         }
+
+
 
         .hero-content {
+
             max-width: 900px;
+
             animation: fadeInUp 1s ease-out;
+
         }
+
+
 
         .hero-content h1 {
+
             font-size: 4.5rem;
+
             margin-bottom: 1.5rem;
+
             font-weight: 700;
+
             letter-spacing: -2px;
+
             line-height: 1.1;
+
         }
+
+
 
         .hero-content p {
+
             font-size: 1.3rem;
+
             margin-bottom: 3rem;
+
             color: var(--light-gray);
+
             font-weight: 400;
+
         }
+
+
 
         .hero-buttons {
+
             display: flex;
+
             gap: 1.5rem;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
         }
+
+
 
         .btn-primary {
+
             background: var(--white);
+
             color: var(--black);
+
             padding: 1.2rem 3rem;
+
             border-radius: 50px;
+
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 1rem;
+
             transition: all 0.3s;
+
         }
+
+
 
         .btn-primary:hover {
+
             background: var(--accent);
+
             transform: translateY(-2px);
+
             box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
+
         }
+
+
 
         .btn-secondary {
+
             background: transparent;
+
             color: var(--white);
+
             padding: 1.2rem 3rem;
+
             border: 2px solid var(--white);
+
             border-radius: 50px;
+
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 1rem;
+
             transition: all 0.3s;
+
         }
+
+
 
         .btn-secondary:hover {
+
             background: var(--white);
+
             color: var(--black);
+
         }
+
+
 
         /* Section Styling */
+
         section {
+
             padding: 8rem 3rem;
+
             max-width: 1400px;
+
             margin: 0 auto;
+
         }
+
+
 
         .section-label {
+
             text-align: center;
+
             font-size: 0.9rem;
+
             color: var(--accent);
+
             font-weight: 600;
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
             margin-bottom: 1rem;
+
         }
+
+
 
         .section-title {
+
             text-align: center;
+
             font-size: 3rem;
+
             margin-bottom: 1rem;
+
             font-weight: 700;
+
             letter-spacing: -1px;
+
         }
+
+
 
         .section-subtitle {
+
             text-align: center;
+
             font-size: 1.2rem;
+
             margin-bottom: 5rem;
+
             color: var(--light-gray);
+
             max-width: 700px;
+
             margin-left: auto;
+
             margin-right: auto;
+
         }
 
-        /* Booking Section */
-        #booking-form {
-            background: var(--dark); /* Utilisation de dark pour la section Formulaire */
-        }
-        
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--gray);
-            padding: 4rem;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
 
-        .booking-form {
-            display: grid;
-            gap: 2rem;
-        }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
+        /* Services Section */
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
+        #services {
 
-        .form-group label {
-            margin-bottom: 0.8rem;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 1rem;
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: var(--white);
-            font-size: 1rem;
-            font-family: inherit;
-            transition: all 0.3s;
+
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            background: var(--white);
-            color: var(--black);
-            padding: 1.2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            background: var(--accent);
-            transform: scale(1.02);
-        }
-
-        /* Services List Section */
-        #services-list {
-            background: var(--black); /* Utilisation de black pour la liste des services */
-        }
 
         .services-grid {
+
             display: grid;
+
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
             gap: 2rem;
+
         }
+
+
 
         .service-card {
+
             background: var(--gray);
+
             padding: 3rem;
+
             border-radius: 20px;
+
             transition: all 0.3s;
+
             border: 1px solid rgba(255, 255, 255, 0.05);
+
         }
+
+
 
         .service-card:hover {
+
             transform: translateY(-10px);
+
             border-color: var(--accent);
+
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
         }
+
+
 
         .service-icon {
+
             font-size: 3rem;
+
             margin-bottom: 1.5rem;
+
         }
+
+
 
         .service-card h3 {
+
             font-size: 1.5rem;
+
             margin-bottom: 1rem;
+
             font-weight: 600;
+
         }
+
+
 
         .service-card p {
+
             color: var(--light-gray);
+
             line-height: 1.7;
+
         }
 
-        /* Les autres sections (#fleet, #reviews, #why, #contact, footer, media queries) restent identiques */
 
-        /* Media Queries (ajustements pour l'ID du formulaire) */
-        @media (max-width: 968px) {
-            /* ... (code media query inchangé) ... */
-            .contact-grid,
-            .footer-content,
-            .vehicle-showcase {
-                grid-template-columns: 1fr;
+
+        /* Fleet Section */
+
+        #fleet {
+
+            background: var(--black);
+
+        }
+
+
+
+        .vehicle-showcase {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 3rem;
+
+            align-items: center;
+
+            margin-top: 3rem;
+
+        }
+
+
+
+        .vehicle-images {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .vehicle-image {
+
+            width: 100%;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+
+
+        .vehicle-image.large {
+
+            grid-column: 1 / -1;
+
+            height: 350px;
+
+        }
+
+
+
+        .vehicle-info {
+
+            background: var(--gray);
+
+            padding: 3rem;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+
+        .vehicle-info h3 {
+
+            font-size: 2rem;
+
+            margin-bottom: 1rem;
+
+            color: var(--accent);
+
+        }
+
+
+
+        .vehicle-info p {
+
+            color: var(--light-gray);
+
+            line-height: 1.8;
+
+            margin-bottom: 2rem;
+
+        }
+
+
+
+        .vehicle-specs {
+
+            display: grid;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .spec-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1rem;
+
+            padding: 1rem;
+
+            background: var(--dark);
+
+            border-radius: 10px;
+
+        }
+
+
+
+        .spec-icon {
+
+            font-size: 1.5rem;
+
+        }
+
+
+
+        .spec-text {
+
+            flex: 1;
+
+        }
+
+
+
+        .spec-text strong {
+
+            display: block;
+
+            color: var(--white);
+
+            margin-bottom: 0.3rem;
+
+        }
+
+
+
+        .spec-text span {
+
+            color: var(--light-gray);
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        /* Reviews Section */
+
+        #reviews {
+
+            background: var(--black);
+
+        }
+
+
+
+        .rating-header {
+
+            text-align: center;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .rating-score {
+
+            font-size: 4rem;
+
+            font-weight: 700;
+
+            color: var(--accent);
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .rating-stars-large {
+
+            font-size: 2rem;
+
+            color: var(--accent);
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .rating-count {
+
+            color: var(--light-gray);
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        .reviews-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+            gap: 2rem;
+
+        }
+
+
+
+        .review-card {
+
+            background: var(--gray);
+
+            padding: 2.5rem;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+            transition: all 0.3s;
+
+        }
+
+
+
+        .review-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--accent);
+
+        }
+
+
+
+        .review-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .review-author {
+
+            font-weight: 600;
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        .review-stars {
+
+            color: var(--accent);
+
+            font-size: 1.2rem;
+
+        }
+
+
+
+        .review-text {
+
+            color: var(--light-gray);
+
+            line-height: 1.7;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .review-date {
+
+            color: var(--light-gray);
+
+            font-size: 0.85rem;
+
+            opacity: 0.7;
+
+        }
+
+
+
+        /* Why Choose Section */
+
+        #why {
+
+            background: var(--dark);
+
+        }
+
+
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 3rem;
+
+            margin-top: 4rem;
+
+        }
+
+
+
+        .why-item {
+
+            text-align: center;
+
+        }
+
+
+
+        .why-icon {
+
+            width: 80px;
+
+            height: 80px;
+
+            background: var(--gray);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 2rem;
+
+            margin: 0 auto 1.5rem;
+
+            border: 2px solid rgba(0, 217, 255, 0.2);
+
+        }
+
+
+
+        .why-item h3 {
+
+            font-size: 1.3rem;
+
+            margin-bottom: 0.8rem;
+
+            font-weight: 600;
+
+        }
+
+
+
+        .why-item p {
+
+            color: var(--light-gray);
+
+            line-height: 1.7;
+
+        }
+
+
+
+        /* Booking Section */
+
+        #booking {
+
+            background: var(--black);
+
+        }
+
+
+
+        .booking-container {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            background: var(--gray);
+
+            padding: 4rem;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+
+        .booking-form {
+
+            display: grid;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+        .form-group label {
+
+            margin-bottom: 0.8rem;
+
+            font-weight: 500;
+
+            font-size: 0.95rem;
+
+        }
+
+
+
+        .form-group input,
+
+        .form-group select,
+
+        .form-group textarea {
+
+            padding: 1rem;
+
+            background: var(--dark);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            border-radius: 10px;
+
+            color: var(--white);
+
+            font-size: 1rem;
+
+            font-family: inherit;
+
+            transition: all 0.3s;
+
+        }
+
+
+
+        .form-group input:focus,
+
+        .form-group select:focus,
+
+        .form-group textarea:focus {
+
+            outline: none;
+
+            border-color: var(--accent);
+
+        }
+
+
+
+        .form-group textarea {
+
+            resize: vertical;
+
+            min-height: 120px;
+
+        }
+
+
+
+        .submit-btn {
+
+            background: var(--white);
+
+            color: var(--black);
+
+            padding: 1.2rem;
+
+            border: none;
+
+            border-radius: 50px;
+
+            font-weight: 600;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s;
+
+            margin-top: 1rem;
+
+        }
+
+
+
+        .submit-btn:hover {
+
+            background: var(--accent);
+
+            transform: scale(1.02);
+
+        }
+
+
+
+        /* Contact Section */
+
+        #contact {
+
+            background: var(--dark);
+
+        }
+
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 4rem;
+
+            align-items: start;
+
+        }
+
+
+
+        .contact-info {
+
+            background: var(--gray);
+
+            padding: 3rem;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+
+        .info-item {
+
+            margin-bottom: 2.5rem;
+
+        }
+
+
+
+        .info-item h3 {
+
+            font-size: 1.1rem;
+
+            margin-bottom: 0.8rem;
+
+            font-weight: 600;
+
+            color: var(--accent);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        .info-item p {
+
+            font-size: 1.2rem;
+
+            color: var(--white);
+
+        }
+
+
+
+        .info-item a {
+
+            color: var(--white);
+
+            text-decoration: none;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .info-item a:hover {
+
+            color: var(--accent);
+
+        }
+
+
+
+        .map-container {
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            height: 500px;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+
+        .map-container iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+
+            filter: grayscale(1) invert(1);
+
+        }
+
+
+
+        /* Footer */
+
+        footer {
+
+            background: var(--black);
+
+            padding: 4rem 3rem 2rem;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+
+
+        .footer-content {
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 3rem;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .footer-section h3 {
+
+            margin-bottom: 1.5rem;
+
+            font-weight: 600;
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        .footer-section p {
+
+            color: var(--light-gray);
+
+            line-height: 1.8;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .footer-links {
+
+            list-style: none;
+
+        }
+
+
+
+        .footer-links li {
+
+            margin-bottom: 0.8rem;
+
+        }
+
+
+
+        .footer-links a {
+
+            color: var(--light-gray);
+
+            text-decoration: none;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .footer-links a:hover {
+
+            color: var(--white);
+
+        }
+
+
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 1rem;
+
+            margin-top: 1.5rem;
+
+        }
+
+
+
+        .social-icons a {
+
+            width: 40px;
+
+            height: 40px;
+
+            background: var(--gray);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--white);
+
+            text-decoration: none;
+
+            transition: all 0.3s;
+
+            font-size: 1.2rem;
+
+        }
+
+
+
+        .social-icons a:hover {
+
+            background: var(--accent);
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .footer-bottom {
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding-top: 2rem;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: var(--light-gray);
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        .footer-bottom-links {
+
+            display: flex;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .footer-bottom-links a {
+
+            color: var(--light-gray);
+
+            text-decoration: none;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .footer-bottom-links a:hover {
+
+            color: var(--white);
+
+        }
+
+
+
+        /* Stats Section */
+
+        .stats-bar {
+
+            background: var(--gray);
+
+            padding: 4rem 3rem;
+
+            border-radius: 20px;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 3rem;
+
+            margin-top: 4rem;
+
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+        }
+
+
+
+        .stat-item {
+
+            text-align: center;
+
+        }
+
+
+
+        .stat-number {
+
+            font-size: 3rem;
+
+            font-weight: 700;
+
+            color: var(--accent);
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .stat-label {
+
+            color: var(--light-gray);
+
+            font-size: 1rem;
+
+        }
+
+
+
+        /* Animations */
+
+        @keyframes fadeInUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+
             }
-            /* ... (code media query inchangé) ... */
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
         }
+
+
+
+            @media (max-width: 968px) {
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+
+
+            .nav-links {
+
+                position: fixed;
+
+                left: -100%;
+
+                top: 80px;
+
+                flex-direction: column;
+
+                background: var(--black);
+
+                width: 100%;
+
+                text-align: center;
+
+                transition: 0.3s;
+
+                padding: 2rem 0;
+
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            }
+
+
+
+            .nav-links.active {
+
+                left: 0;
+
+            }
+
+
+
+            .hero-content h1 {
+
+                font-size: 3rem;
+
+            }
+
+
+
+            .section-title {
+
+                font-size: 2.2rem;
+
+            }
+
+
+
+            .contact-grid,
+
+            .footer-content,
+
+            .vehicle-showcase {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .booking-container {
+
+                padding: 2rem;
+
+            }
+
+
+
+            nav {
+
+                padding: 1.5rem 2rem;
+
+            }
+
+
+
+            section {
+
+                padding: 5rem 2rem;
+
+            }
+
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+                text-align: center;
+
+            }
+
+
+
+            .stats-bar {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 2rem;
+
+            }
+
+
+
+            .vehicle-images {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 480px) {
+
+            .hero-content h1 {
+
+                font-size: 2.2rem;
+
+            }
+
+
+
+            .section-title {
+
+                font-size: 1.8rem;
+
+            }
+
+
+
+            .stat-number {
+
+                font-size: 2.2rem;
+
+            }
+
+        }
+
     </style>
+
 </head>
+
 <body>
+
+    <!-- Header -->
+
     <header>
+
         <nav>
+
             <a href="#home" class="logo">ELHAM TRANSPORT</a>
+
             <div class="menu-toggle" onclick="toggleMenu()">
+
                 <span></span>
+
                 <span></span>
+
                 <span></span>
+
             </div>
+
             <ul class="nav-links" id="navLinks">
-                <li><a href="#services-list">Nos Services</a></li> <li><a href="#fleet">Notre Véhicule</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#fleet">Notre Véhicule</a></li>
+
                 <li><a href="#reviews">Avis</a></li>
+
                 <li><a href="#why">Pourquoi Nous</a></li>
-                <li><a href="#booking-form">Réserver</a></li> <li><a href="#contact">Contact</a></li>
-                <li><a href="#booking-form" class="cta-btn">Réserver Maintenant</a></li> </ul>
+
+                <li><a href="#booking">Réserver</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+                <li><a href="#booking" class="cta-btn">Réserver Maintenant</a></li>
+
+            </ul>
+
         </nav>
+
     </header>
 
+
+
+    <!-- Hero Section -->
+
     <section id="home">
+
         <div class="hero-content">
+
             <h1>Votre Chauffeur Privé Premium à Bordeaux</h1>
+
             <p>Transport VTC de luxe. Ponctualité garantie. Service impeccable.</p>
+
             <div class="hero-buttons">
-                <a href="#booking-form" class="btn-primary">Réserver une Course</a> <a href="#contact" class="btn-secondary">Nous Contacter</a>
+
+                <a href="#booking" class="btn-primary">Réserver une Course</a>
+
+                <a href="#contact" class="btn-secondary">Nous Contacter</a>
+
             </div>
+
         </div>
+
     </section>
-    
-    <section id="booking-form">
-        <div class="section-label">Réservation VTC</div>
+
+
+
+    <!-- Services Section -->
+
+    <section id="services">
+
+        <div class="section-label">Nos Services</div>
+
         <h2 class="section-title">Réservez Votre Course en 2 Minutes</h2>
-        <p class="section-subtitle">Remplissez le formulaire ci-dessous et nous vous contacterons pour confirmer votre course.</p>
+
+        <p class="section-subtitle">Remplissez le formulaire ci-dessous et nous vous confirmerons votre réservation immédiatement.</p>
+
+
 
         <div class="booking-container">
-            <form class="booking-form" id="bookingForm" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+
+            <form class="booking-form" id="bookingForm">
+
                 <div class="form-row">
+
                     <div class="form-group">
+
                         <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="Nom_Client" placeholder="Jean Dupont" required>
+
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+
                     </div>
+
                     <div class="form-group">
+
                         <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="Telephone_Client" placeholder="06 12 34 56 78" required>
+
+                        <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="form-row">
+
                     <div class="form-group">
+
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="Email_Client" placeholder="jean.dupont@email.com" required>
+
+                        <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required>
+
                     </div>
+
                     <div class="form-group">
+
                         <label for="passengers">Nombre de passagers</label>
-                        <select id="passengers" name="Nombre_Passagers" required>
+
+                        <select id="passengers" name="passengers" required>
+
                             <option value="">Sélectionner</option>
+
                             <option value="1">1 passager</option>
+
                             <option value="2">2 passagers</option>
+
                             <option value="3">3 passagers</option>
+
                             <option value="4">4 passagers</option>
+
                         </select>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="form-group">
+
                     <label for="pickup">Adresse de départ</label>
-                    <input type="text" id="pickup" name="Adresse_Depart" placeholder="Adresse complète" required>
+
+                    <input type="text" id="pickup" name="pickup" placeholder="Adresse complète" required>
+
                 </div>
 
+
+
                 <div class="form-group">
+
                     <label for="destination">Destination</label>
-                    <input type="text" id="destination" name="Destination" placeholder="Adresse complète" required>
+
+                    <input type="text" id="destination" name="destination" placeholder="Adresse complète" required>
+
                 </div>
+
+
 
                 <div class="form-row">
+
                     <div class="form-group">
+
                         <label for="date">Date</label>
-                        <input type="date" id="date" name="Date_Course" required>
+
+                        <input type="date" id="date" name="date" required>
+
                     </div>
+
                     <div class="form-group">
+
                         <label for="time">Heure</label>
-                        <input type="time" id="time" name="Heure_Course" required>
+
+                        <input type="time" id="time" name="time" required>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="form-group">
+
                     <label for="notes">Informations complémentaires</label>
-                    <textarea id="notes" name="Notes_Client" placeholder="Bagages spéciaux, demandes particulières..."></textarea>
+
+                    <textarea id="notes" name="notes" placeholder="Bagages spéciaux, demandes particulières..."></textarea>
+
                 </div>
+
+
 
                 <button type="submit" class="submit-btn">Confirmer la Réservation</button>
+
             </form>
+
         </div>
+
     </section>
 
-    <section id="services-list">
-        <div class="section-label">Nos Prestations</div>
-        <h2 class="section-title">Transport Premium pour Tous Vos Besoins</h2>
-        <p class="section-subtitle">Du trajet quotidien aux occasions spéciales, nous assurons un service de qualité supérieure adapté à chaque situation.</p>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🚗</div>
-                <h3>Courses Urbaines</h3>
-                <p>Déplacements rapides et confortables dans Bordeaux et sa région. Disponible 24h/24, 7j/7 pour tous vos trajets quotidiens.</p>
-            </div>
 
-            <div class="service-card">
-                <div class="service-icon">✈️</div>
-                <h3>Transferts Aéroport</h3>
-                <p>Service d'accueil personnalisé et prise en charge directe. Bordeaux-Mérignac et tous les aéroports régionaux.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🏢</div>
-                <h3>Transport Affaires</h3>
-                <p>Solution professionnelle pour vos rendez-vous d'affaires. Discrétion, ponctualité et confort garantis.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🎉</div>
-                <h3>Événements Spéciaux</h3>
-                <p>Mariages, soirées, événements d'entreprise. Un service premium pour vos occasions exceptionnelles.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🚆</div>
-                <h3>Transferts Gares</h3>
-                <p>Connexion directe avec les gares de Bordeaux. Service ponctuel pour ne jamais manquer votre train.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🌍</div>
-                <h3>Longues Distances</h3>
-                <p>Voyages vers d'autres villes et régions dans le confort et la sérénité. Tarifs compétitifs.</p>
-            </div>
-        </div>
-
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number">5,000+</div>
-                <div class="stat-label">Courses réalisées</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Clients satisfaits</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Disponibilité</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10 min</div>
-                <div class="stat-label">Temps d'arrivée moyen</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="fleet">
-        <div class="section-label">Notre Véhicule</div>
-        <h2 class="section-title">Toyota Prius Hybride</h2>
-        <p class="section-subtitle">Confort premium, respect de l'environnement et technologie de pointe pour tous vos déplacements.</p>
-
-        <div class="vehicle-showcase">
-            <div class="vehicle-images">
-                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80" alt="Toyota Prius extérieur" class="vehicle-image large">
-                <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=80" alt="Toyota Prius intérieur" class="vehicle-image">
-                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" alt="Toyota Prius technologie" class="vehicle-image">
-            </div>
-
-            <div class="vehicle-info">
-                <h3>Confort & Écologie</h3>
-                <p>Notre Toyota Prius hybride allie performance, économie et respect de l'environnement. Profitez d'un trajet silencieux et confortable tout en réduisant votre empreinte carbone.</p>
-
-                <div class="vehicle-specs">
-                    <div class="spec-item">
-                        <div class="spec-icon">👥</div>
-                        <div class="spec-text">
-                            <strong>4 Passagers</strong>
-                            <span>Espace généreux et confortable</span>
-                        </div>
-                    </div>
-
-                    <div class="spec-item">
-                        <div class="spec-icon">🧳</div>
-                        <div class="spec-text">
-                            <strong>3 Bagages</strong>
-                            <span>Coffre spacieux pour vos affaires</span>
-                        </div>
-                    </div>
-
-                    <div class="spec-item">
-                        <div class="spec-icon">❄️</div>
-                        <div class="spec-text">
-                            <strong>Climatisation</strong>
-                            <span>Température contrôlée en toute saison</span>
-                        </div>
-                    </div>
-
-                    <div class="spec-item">
-                        <div class="spec-icon">🌱</div>
-                        <div class="spec-text">
-                            <strong>Motorisation Hybride</strong>
-                            <span>Économique et écologique</span>
-                        </div>
-                    </div>
-
-                    <div class="spec-item">
-                        <div class="spec-icon">📱</div>
-                        <div class="spec-text">
-                            <strong>Connectivité</strong>
-                            <span>Chargeur USB disponible</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews">
-        <div class="section-label">Avis Clients</div>
-        <h2 class="section-title">Ce Que Disent Nos Clients</h2>
-        <p class="section-subtitle">La satisfaction de nos clients est notre priorité absolue.</p>
-
-        <div class="rating-header">
-            <div class="rating-score">4.6</div>
-            <div class="rating-stars-large">★★★★★</div>
-            <div class="rating-count">Basé sur 127 avis vérifiés</div>
-        </div>
-
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Sophie Martin</div>
-                    <div class="review-stars">★★★★★</div>
-                </div>
-                <p class="review-text">"Service impeccable ! Chauffeur ponctuel, courtois et conduite très agréable. La Toyota Prius est confortable et silencieuse. Je recommande vivement pour les trajets aéroport."</p>
-                <div class="review-date">Il y a 2 jours</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Thomas Dupont</div>
-                    <div class="review-stars">★★★★★</div>
-                </div>
-                <p class="review-text">"Excellent rapport qualité-prix. Réservation simple et rapide. Le chauffeur était très professionnel et m'a attendu malgré mon retard de vol. Top !"</p>
-                <div class="review-date">Il y a 5 jours</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Marie Leblanc</div>
-                    <div class="review-stars">★★★★☆</div>
-                </div>
-                <p class="review-text">"Très bon service pour mes déplacements professionnels à Bordeaux. Véhicule propre, conduite souple. Seul petit bémol : parfois difficile de joindre par téléphone aux heures de pointe."</p>
-                <div class="review-date">Il y a 1 semaine</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Jean-Pierre Rousseau</div>
-                    <div class="review-stars">★★★★★</div>
-                </div>
-                <p class="review-text">"J'utilise Elham Transport depuis 6 mois pour mes rendez-vous clients. Toujours ponctuel, discret et professionnel. C'est devenu mon chauffeur VTC de confiance à Bordeaux."</p>
-                <div class="review-date">Il y a 2 semaines</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Claire Dubois</div>
-                    <div class="review-stars">★★★★★</div>
-                </div>
-                <p class="review-text">"Parfait pour mon mariage ! Le chauffeur était élégant et très arrangeant. La voiture était impeccable. Merci pour cette belle prestation !"</p>
-                <div class="review-date">Il y a 3 semaines</div>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-author">Antoine Bernard</div>
-                    <div class="review-stars">★★★★★</div>
-                </div>
-                <p class="review-text">"Super expérience ! Tarif transparent, pas de mauvaise surprise. Le véhicule hybride est un vrai plus, silencieux et confortable. Je recommande à 100%."</p>
-                <div class="review-date">Il y a 1 mois</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why">
-        <div class="section-label">Pourquoi Elham Transport</div>
-        <h2 class="section-title">Excellence et Professionnalisme</h2>
-        <p class="section-subtitle">Notre engagement : vous offrir la meilleure expérience de transport possible.</p>
-
-        <div class="why-grid">
-            <div class="why-item">
-                <div class="why-icon">⏱️</div>
-                <h3>Ponctualité Garantie</h3>
-                <p>Nous respectons vos horaires. Arrivée dans les 10 minutes suivant votre réservation.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">👔</div>
-                <h3>Chauffeurs Professionnels</h3>
-                <p>Formés, expérimentés et courtois. Carte professionnelle VTC et assurance complète.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">💎</div>
-                <h3>Véhicules Premium</h3>
-                <p>Flotte récente et entretenue. Confort maximal pour tous vos trajets.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">💰</div>
-                <h3>Tarifs Transparents</h3>
-                <p>Prix fixes annoncés à la réservation. Aucune surprise, aucun frais caché.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">📱</div>
-                <h3>Réservation Simple</h3>
-                <p>En ligne, par téléphone ou par SMS. Confirmation immédiate de votre course.</p>
-            </div>
-
-            <div class="why-item">
-                <div class="why-icon">🌟</div>
-                <h3>Service Client</h3>
-                <p>Support disponible 24/7. Nous sommes à votre écoute à tout moment.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Contact Section -->
 
     <section id="contact">
+
         <div class="section-label">Contact</div>
+
         <h2 class="section-title">Nous Joindre</h2>
+
         <p class="section-subtitle">Notre équipe est disponible 24h/24 pour répondre à toutes vos questions.</p>
 
+
+
         <div class="contact-grid">
+
             <div class="contact-info">
+
                 <div class="info-item">
+
                     <h3>Téléphone</h3>
-                    <p><a href="tel:0634359602">06 34 35 96 02</a></p>
+
+                    <p><a href="tel:0619930724">06 34 35 96 02</a></p>
+
                 </div>
 
+
+
                 <div class="info-item">
+
                     <h3>Email</h3>
+
                     <p><a href="mailto:hatem.stage@gmail.com">hatem.stage@gmail.com</a></p>
+
                 </div>
 
+
+
                 <div class="info-item">
+
                     <h3>Adresse</h3>
+
                     <p>Bordeaux et sa région<br>Service disponible 24h/24</p>
+
                 </div>
 
+
+
                 <div class="info-item">
+
                     <h3>Véhicule</h3>
+
                     <p>Toyota Prius Hybride<br>Confort, économie et écologie</p>
+
                 </div>
 
+
+
                 <div class="info-item">
+
                     <h3>Réseaux Sociaux</h3>
+
                     <div class="social-icons">
+
                         <a href="#" aria-label="Facebook">f</a>
+
                         <a href="#" aria-label="Instagram">📷</a>
+
                         <a href="#" aria-label="LinkedIn">in</a>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
             <div class="map-container">
+
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46068.53719739853!2d-0.6309646!3d44.841225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sfr!2sfr!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+
             </div>
+
         </div>
+
     </section>
 
+
+
+    <!-- Footer -->
+
     <footer>
+
         <div class="footer-content">
+
             <div class="footer-section">
+
                 <h3>ELHAM TRANSPORT</h3>
+
                 <p>Service VTC premium à Bordeaux. Votre chauffeur privé de confiance pour tous vos déplacements.</p>
+
                 <p style="margin-top: 1rem; color: var(--accent);">Disponible 24/7</p>
+
             </div>
 
+
+
             <div class="footer-section">
+
                 <h3>Services</h3>
+
                 <ul class="footer-links">
-                    <li><a href="#services-list">Courses Urbaines</a></li>
-                    <li><a href="#services-list">Transferts Aéroport</a></li>
-                    <li><a href="#services-list">Transport Affaires</a></li>
-                    <li><a href="#services-list">Événements Spéciaux</a></li>
-                    <li><a href="#services-list">Longues Distances</a></li>
+
+                    <li><a href="#services">Courses Urbaines</a></li>
+
+                    <li><a href="#services">Transferts Aéroport</a></li>
+
+                    <li><a href="#services">Transport Affaires</a></li>
+
+                    <li><a href="#services">Événements Spéciaux</a></li>
+
+                    <li><a href="#services">Longues Distances</a></li>
+
                 </ul>
+
             </div>
 
+
+
             <div class="footer-section">
+
                 <h3>Informations</h3>
+
                 <ul class="footer-links">
+
                     <li><a href="#fleet">Notre Véhicule</a></li>
+
                     <li><a href="#reviews">Avis Clients</a></li>
+
                     <li><a href="#why">Pourquoi Nous</a></li>
-                    <li><a href="#booking-form">Réserver</a></li>
+
+                    <li><a href="#booking">Réserver</a></li>
+
                     <li><a href="#">FAQ</a></li>
+
                 </ul>
+
             </div>
 
+
+
             <div class="footer-section">
+
                 <h3>Contact</h3>
+
                 <ul class="footer-links">
-                    <li><a href="tel:0634359602">06 34 35 96 02</a></li>
+
+                    <li><a href="tel:0619930724">06 19 93 07 24</a></li>
+
                     <li><a href="mailto:hatem.stage@gmail.com">hatem.stage@gmail.com</a></li>
+
                     <li>Bordeaux et région</li>
+
                 </ul>
+
                 <div class="social-icons">
+
                     <a href="#" aria-label="Facebook">f</a>
+
                     <a href="#" aria-label="Instagram">📷</a>
+
                     <a href="#" aria-label="LinkedIn">in</a>
+
                 </div>
+
             </div>
+
         </div>
+
+
 
         <div class="footer-bottom">
-            <p>© 2024 Elham Transport. Tous droits réservés.</p>
+
+            <p>&copy; 2024 Elham Transport. Tous droits réservés.</p>
+
             <div class="footer-bottom-links">
+
                 <a href="#">Mentions Légales</a>
+
                 <a href="#">CGV</a>
+
                 <a href="#">Politique de Confidentialité</a>
+
             </div>
+
         </div>
+
     </footer>
 
+
+
     <script>
+
         function toggleMenu() {
+
             const navLinks = document.getElementById('navLinks');
+
             navLinks.classList.toggle('active');
+
         }
+
+
 
         // Close menu when clicking on a link
+
         document.querySelectorAll('.nav-links a').forEach(link => {
+
             link.addEventListener('click', () => {
+
                 document.getElementById('navLinks').classList.remove('active');
+
             });
+
         });
 
+
+
         // Set min date for booking form to today
+
         const dateInput = document.getElementById('date');
+
         if (dateInput) {
+
             const today = new Date().toISOString().split('T')[0];
+
             dateInput.setAttribute('min', today);
+
         }
 
-        // Le code de soumission de formulaire SMS est supprimé
-        // La soumission sera gérée par Formspree (action="https://formspree.io/f/VOTRE_ID_FORMSPREE")
-        // Aucune autre logique JS n'est nécessaire ici.
+
+
+        // Handle form submission
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            
+
+            // Get form data
+
+            const name = document.getElementById('name').value;
+
+            const phone = document.getElementById('phone').value;
+
+            const email = document.getElementById('email').value;
+
+            const passengers = document.getElementById('passengers').value;
+
+            const pickup = document.getElementById('pickup').value;
+
+            const destination = document.getElementById('destination').value;
+
+            const date = document.getElementById('date').value;
+
+            const time = document.getElementById('time').value;
+
+            const notes = document.getElementById('notes').value;
+
+            
+
+            // Format message for SMS using the sms: protocol
+
+            const message = `NOUVELLE RÉSERVATION VTC
+
+
+
+Nom: ${name}
+
+Tél: ${phone}
+
+Email: ${email}
+
+Passagers: ${passengers}
+
+
+
+Départ: ${pickup}
+
+Destination: ${destination}
+
+Date: ${date}
+
+Heure: ${time}
+
+
+
+Notes: ${notes || 'Aucune'}`;
+
+            
+
+            // For iOS, use body parameter
+
+            const encodedMessage = encodeURIComponent(message);
+
+            
+
+            // Try to open SMS app with pre-filled message
+
+            // This will work on mobile devices
+
+            window.open(`sms:0634359602${/iPhone|iPad|iPod/.test(navigator.userAgent) ? '&' : '?'}body=${encodedMessage}`, '_self');
+
+            
+
+            // Show confirmation
+
+            alert('✅ Réservation enregistrée !\n\n📱 Votre application SMS va s\'ouvrir avec le récapitulatif.\n\nVeuillez envoyer le message pour finaliser votre réservation.\n\nNous vous confirmerons votre course rapidement.');
+
+            
+
+            // Reset form after a short delay
+
+            setTimeout(() => {
+
+                this.reset();
+
+            }, 1000);
+
+        });
+
     </script>
+
 </body>
-</html>
+
+</html>Transport Premium pour Tous Vos Besoins</h2>
+
+        <p class="section-subtitle">Du trajet quotidien aux occasions spéciales, nous assurons un service de qualité supérieure adapté à chaque situation.</p>
+
+
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">🚗</div>
+
+                <h3>Courses Urbaines</h3>
+
+                <p>Déplacements rapides et confortables dans Bordeaux et sa région. Disponible 24h/24, 7j/7 pour tous vos trajets quotidiens.</p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✈️</div>
+
+                <h3>Transferts Aéroport</h3>
+
+                <p>Service d'accueil personnalisé et prise en charge directe. Bordeaux-Mérignac et tous les aéroports régionaux.</p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🏢</div>
+
+                <h3>Transport Affaires</h3>
+
+                <p>Solution professionnelle pour vos rendez-vous d'affaires. Discrétion, ponctualité et confort garantis.</p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🎉</div>
+
+                <h3>Événements Spéciaux</h3>
+
+                <p>Mariages, soirées, événements d'entreprise. Un service premium pour vos occasions exceptionnelles.</p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🚆</div>
+
+                <h3>Transferts Gares</h3>
+
+                <p>Connexion directe avec les gares de Bordeaux. Service ponctuel pour ne jamais manquer votre train.</p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🌍</div>
+
+                <h3>Longues Distances</h3>
+
+                <p>Voyages vers d'autres villes et régions dans le confort et la sérénité. Tarifs compétitifs.</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stats-bar">
+
+            <div class="stat-item">
+
+                <div class="stat-number">5,000+</div>
+
+                <div class="stat-label">Courses réalisées</div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="stat-number">98%</div>
+
+                <div class="stat-label">Clients satisfaits</div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="stat-number">24/7</div>
+
+                <div class="stat-label">Disponibilité</div>
+
+            </div>
+
+            <div class="stat-item">
+
+                <div class="stat-number">10 min</div>
+
+                <div class="stat-label">Temps d'arrivée moyen</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Vehicle Section -->
+
+    <section id="fleet">
+
+        <div class="section-label">Notre Véhicule</div>
+
+        <h2 class="section-title">Toyota Prius Hybride</h2>
+
+        <p class="section-subtitle">Confort premium, respect de l'environnement et technologie de pointe pour tous vos déplacements.</p>
+
+
+
+        <div class="vehicle-showcase">
+
+            <div class="vehicle-images">
+
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80" alt="Toyota Prius extérieur" class="vehicle-image large">
+
+                <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=80" alt="Toyota Prius intérieur" class="vehicle-image">
+
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" alt="Toyota Prius technologie" class="vehicle-image">
+
+            </div>
+
+
+
+            <div class="vehicle-info">
+
+                <h3>Confort & Écologie</h3>
+
+                <p>Notre Toyota Prius hybride allie performance, économie et respect de l'environnement. Profitez d'un trajet silencieux et confortable tout en réduisant votre empreinte carbone.</p>
+
+
+
+                <div class="vehicle-specs">
+
+                    <div class="spec-item">
+
+                        <div class="spec-icon">👥</div>
+
+                        <div class="spec-text">
+
+                            <strong>4 Passagers</strong>
+
+                            <span>Espace généreux et confortable</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spec-item">
+
+                        <div class="spec-icon">🧳</div>
+
+                        <div class="spec-text">
+
+                            <strong>3 Bagages</strong>
+
+                            <span>Coffre spacieux pour vos affaires</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spec-item">
+
+                        <div class="spec-icon">❄️</div>
+
+                        <div class="spec-text">
+
+                            <strong>Climatisation</strong>
+
+                            <span>Température contrôlée en toute saison</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spec-item">
+
+                        <div class="spec-icon">🌱</div>
+
+                        <div class="spec-text">
+
+                            <strong>Motorisation Hybride</strong>
+
+                            <span>Économique et écologique</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spec-item">
+
+                        <div class="spec-icon">📱</div>
+
+                        <div class="spec-text">
+
+                            <strong>Connectivité</strong>
+
+                            <span>Chargeur USB disponible</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Reviews Section -->
+
+    <section id="reviews">
+
+        <div class="section-label">Avis Clients</div>
+
+        <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+
+        <p class="section-subtitle">La satisfaction de nos clients est notre priorité absolue.</p>
+
+
+
+        <div class="rating-header">
+
+            <div class="rating-score">4.6</div>
+
+            <div class="rating-stars-large">★★★★★</div>
+
+            <div class="rating-count">Basé sur 127 avis vérifiés</div>
+
+        </div>
+
+
+
+        <div class="reviews-grid">
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Sophie Martin</div>
+
+                    <div class="review-stars">★★★★★</div>
+
+                </div>
+
+                <p class="review-text">"Service impeccable ! Chauffeur ponctuel, courtois et conduite très agréable. La Toyota Prius est confortable et silencieuse. Je recommande vivement pour les trajets aéroport."</p>
+
+                <div class="review-date">Il y a 2 jours</div>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Thomas Dupont</div>
+
+                    <div class="review-stars">★★★★★</div>
+
+                </div>
+
+                <p class="review-text">"Excellent rapport qualité-prix. Réservation simple et rapide. Le chauffeur était très professionnel et m'a attendu malgré mon retard de vol. Top !"</p>
+
+                <div class="review-date">Il y a 5 jours</div>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Marie Leblanc</div>
+
+                    <div class="review-stars">★★★★☆</div>
+
+                </div>
+
+                <p class="review-text">"Très bon service pour mes déplacements professionnels à Bordeaux. Véhicule propre, conduite souple. Seul petit bémol : parfois difficile de joindre par téléphone aux heures de pointe."</p>
+
+                <div class="review-date">Il y a 1 semaine</div>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Jean-Pierre Rousseau</div>
+
+                    <div class="review-stars">★★★★★</div>
+
+                </div>
+
+                <p class="review-text">"J'utilise Elham Transport depuis 6 mois pour mes rendez-vous clients. Toujours ponctuel, discret et professionnel. C'est devenu mon chauffeur VTC de confiance à Bordeaux."</p>
+
+                <div class="review-date">Il y a 2 semaines</div>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Claire Dubois</div>
+
+                    <div class="review-stars">★★★★★</div>
+
+                </div>
+
+                <p class="review-text">"Parfait pour mon mariage ! Le chauffeur était élégant et très arrangeant. La voiture était impeccable. Merci pour cette belle prestation !"</p>
+
+                <div class="review-date">Il y a 3 semaines</div>
+
+            </div>
+
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="review-author">Antoine Bernard</div>
+
+                    <div class="review-stars">★★★★★</div>
+
+                </div>
+
+                <p class="review-text">"Super expérience ! Tarif transparent, pas de mauvaise surprise. Le véhicule hybride est un vrai plus, silencieux et confortable. Je recommande à 100%."</p>
+
+                <div class="review-date">Il y a 1 mois</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Why Choose Section -->
+
+    <section id="why">
+
+        <div class="section-label">Pourquoi Elham Transport</div>
+
+        <h2 class="section-title">Excellence et Professionnalisme</h2>
+
+        <p class="section-subtitle">Notre engagement : vous offrir la meilleure expérience de transport possible.</p>
+
+
+
+        <div class="why-grid">
+
+            <div class="why-item">
+
+                <div class="why-icon">⏱️</div>
+
+                <h3>Ponctualité Garantie</h3>
+
+                <p>Nous respectons vos horaires. Arrivée dans les 10 minutes suivant votre réservation.</p>
+
+            </div>
+
+
+
+            <div class="why-item">
+
+                <div class="why-icon">👔</div>
+
+                <h3>Chauffeurs Professionnels</h3>
+
+                <p>Formés, expérimentés et courtois. Carte professionnelle VTC et assurance complète.</p>
+
+            </div>
+
+
+
+            <div class="why-item">
+
+                <div class="why-icon">💎</div>
+
+                <h3>Véhicules Premium</h3>
+
+                <p>Flotte récente et entretenue. Confort maximal pour tous vos trajets.</p>
+
+            </div>
+
+
+
+            <div class="why-item">
+
+                <div class="why-icon">💰</div>
+
+                <h3>Tarifs Transparents</h3>
+
+                <p>Prix fixes annoncés à la réservation. Aucune surprise, aucun frais caché.</p>
+
+            </div>
+
+
+
+            <div class="why-item">
+
+                <div class="why-icon">📱</div>
+
+                <h3>Réservation Simple</h3>
+
+                <p>En ligne, par téléphone ou par SMS. Confirmation immédiate de votre course.</p>
+
+            </div>
+
+
+
+            <div class="why-item">
+
+                <div class="why-icon">🌟</div>
+
+                <h3>Service Client</h3>
+
+                <p>Support disponible 24/7. Nous sommes à votre écoute à tout moment.</p>
+
+            </div>
+
+        </div>
+
+    </section>
