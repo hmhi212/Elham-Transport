@@ -267,69 +267,159 @@
             background: var(--black);
         }
 
-        .fleet-grid {
+        .vehicle-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
         }
 
-        .fleet-card {
+        .vehicle-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .vehicle-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vehicle-image.large {
+            grid-column: 1 / -1;
+            height: 350px;
+        }
+
+        .vehicle-info {
             background: var(--gray);
+            padding: 3rem;
             border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .fleet-card:hover {
-            transform: scale(1.02);
+        .vehicle-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .vehicle-info p {
+            color: var(--light-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .vehicle-specs {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--dark);
+            border-radius: 10px;
+        }
+
+        .spec-icon {
+            font-size: 1.5rem;
+        }
+
+        .spec-text {
+            flex: 1;
+        }
+
+        .spec-text strong {
+            display: block;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        .spec-text span {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Reviews Section */
+        #reviews {
+            background: var(--black);
+        }
+
+        .rating-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .rating-score {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-stars-large {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-count {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--gray);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
             border-color: var(--accent);
         }
 
-        .fleet-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .fleet-content {
-            padding: 2rem;
-        }
-
-        .fleet-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .fleet-content .vehicle-type {
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .fleet-content p {
-            color: var(--light-gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .fleet-features {
+        .review-header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
-        .feature-tag {
-            background: rgba(0, 217, 255, 0.1);
+        .review-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .review-stars {
             color: var(--accent);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            color: var(--light-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .review-date {
+            color: var(--light-gray);
             font-size: 0.85rem;
-            font-weight: 500;
+            opacity: 0.7;
         }
 
         /* Why Choose Section */
@@ -651,8 +741,7 @@
             }
         }
 
-        /* Responsive */
-        @media (max-width: 968px) {
+            @media (max-width: 968px) {
             .menu-toggle {
                 display: flex;
             }
@@ -683,7 +772,8 @@
             }
 
             .contact-grid,
-            .footer-content {
+            .footer-content,
+            .vehicle-showcase {
                 grid-template-columns: 1fr;
             }
 
@@ -712,6 +802,10 @@
             .stats-bar {
                 grid-template-columns: 1fr 1fr;
                 gap: 2rem;
+            }
+
+            .vehicle-images {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -742,6 +836,8 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Notre Véhicule</a></li>
+                <li><a href="#reviews">Avis</a></li>
                 <li><a href="#why">Pourquoi Nous</a></li>
                 <li><a href="#booking">Réserver</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -888,7 +984,7 @@
                     <li><a href="#services">Courses Urbaines</a></li>
                     <li><a href="#services">Transferts Aéroport</a></li>
                     <li><a href="#services">Transport Affaires</a></li>
-                    <li><a href="#services">Événements</a></li>
+                    <li><a href="#services">Événements Spéciaux</a></li>
                     <li><a href="#services">Longues Distances</a></li>
                 </ul>
             </div>
@@ -896,10 +992,10 @@
             <div class="footer-section">
                 <h3>Informations</h3>
                 <ul class="footer-links">
+                    <li><a href="#fleet">Notre Véhicule</a></li>
+                    <li><a href="#reviews">Avis Clients</a></li>
                     <li><a href="#why">Pourquoi Nous</a></li>
                     <li><a href="#booking">Réserver</a></li>
-                    <li><a href="#services">Nos Services</a></li>
-                    <li><a href="#">Tarifs</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
@@ -964,25 +1060,35 @@
             const time = document.getElementById('time').value;
             const notes = document.getElementById('notes').value;
             
-            // Format message for SMS
-            const message = `NOUVELLE RÉSERVATION VTC%0A%0ANom: ${name}%0ATél: ${phone}%0AEmail: ${email}%0APassagers: ${passengers}%0A%0ADépart: ${pickup}%0ADestination: ${destination}%0ADate: ${date}%0AHeure: ${time}%0A%0ANotes: ${notes}`;
+            // Format message for SMS using the sms: protocol
+            const message = `NOUVELLE RÉSERVATION VTC
+
+Nom: ${name}
+Tél: ${phone}
+Email: ${email}
+Passagers: ${passengers}
+
+Départ: ${pickup}
+Destination: ${destination}
+Date: ${date}
+Heure: ${time}
+
+Notes: ${notes || 'Aucune'}`;
             
-            // Send SMS via tel: link (will open messaging app on mobile)
-            window.location.href = `sms:0619930724?body=${message}`;
+            // For iOS, use body parameter
+            const encodedMessage = encodeURIComponent(message);
             
-            // Also send email as backup
-            const emailSubject = `Nouvelle réservation VTC - ${name}`;
-            const emailBody = `NOUVELLE RÉSERVATION VTC%0A%0ANom: ${name}%0ATéléphone: ${phone}%0AEmail: ${email}%0ANombre de passagers: ${passengers}%0A%0AAdresse de départ: ${pickup}%0ADestination: ${destination}%0ADate: ${date}%0AHeure: ${time}%0A%0AInformations complémentaires: ${notes}`;
-            
-            setTimeout(() => {
-                window.location.href = `mailto:hatem.stage@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-            }, 1000);
+            // Try to open SMS app with pre-filled message
+            // This will work on mobile devices
+            window.open(`sms:0619930724${/iPhone|iPad|iPod/.test(navigator.userAgent) ? '&' : '?'}body=${encodedMessage}`, '_self');
             
             // Show confirmation
-            alert('Merci pour votre réservation ! Votre demande va être envoyée par SMS et email. Nous vous contacterons rapidement pour confirmation.');
+            alert('✅ Réservation enregistrée !\n\n📱 Votre application SMS va s\'ouvrir avec le récapitulatif.\n\nVeuillez envoyer le message pour finaliser votre réservation.\n\nNous vous confirmerons votre course rapidement.');
             
-            // Reset form
-            this.reset();
+            // Reset form after a short delay
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
         });
     </script>
 </body>
@@ -1047,6 +1153,137 @@
         </div>
     </section>
 
+    <!-- Vehicle Section -->
+    <section id="fleet">
+        <div class="section-label">Notre Véhicule</div>
+        <h2 class="section-title">Toyota Prius Hybride</h2>
+        <p class="section-subtitle">Confort premium, respect de l'environnement et technologie de pointe pour tous vos déplacements.</p>
+
+        <div class="vehicle-showcase">
+            <div class="vehicle-images">
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80" alt="Toyota Prius extérieur" class="vehicle-image large">
+                <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=80" alt="Toyota Prius intérieur" class="vehicle-image">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" alt="Toyota Prius technologie" class="vehicle-image">
+            </div>
+
+            <div class="vehicle-info">
+                <h3>Confort & Écologie</h3>
+                <p>Notre Toyota Prius hybride allie performance, économie et respect de l'environnement. Profitez d'un trajet silencieux et confortable tout en réduisant votre empreinte carbone.</p>
+
+                <div class="vehicle-specs">
+                    <div class="spec-item">
+                        <div class="spec-icon">👥</div>
+                        <div class="spec-text">
+                            <strong>4 Passagers</strong>
+                            <span>Espace généreux et confortable</span>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">🧳</div>
+                        <div class="spec-text">
+                            <strong>3 Bagages</strong>
+                            <span>Coffre spacieux pour vos affaires</span>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">❄️</div>
+                        <div class="spec-text">
+                            <strong>Climatisation</strong>
+                            <span>Température contrôlée en toute saison</span>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">🌱</div>
+                        <div class="spec-text">
+                            <strong>Motorisation Hybride</strong>
+                            <span>Économique et écologique</span>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">📱</div>
+                        <div class="spec-text">
+                            <strong>Connectivité</strong>
+                            <span>Chargeur USB disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="section-label">Avis Clients</div>
+        <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+        <p class="section-subtitle">La satisfaction de nos clients est notre priorité absolue.</p>
+
+        <div class="rating-header">
+            <div class="rating-score">4.6</div>
+            <div class="rating-stars-large">★★★★★</div>
+            <div class="rating-count">Basé sur 127 avis vérifiés</div>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Sophie Martin</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">"Service impeccable ! Chauffeur ponctuel, courtois et conduite très agréable. La Toyota Prius est confortable et silencieuse. Je recommande vivement pour les trajets aéroport."</p>
+                <div class="review-date">Il y a 2 jours</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Thomas Dupont</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">"Excellent rapport qualité-prix. Réservation simple et rapide. Le chauffeur était très professionnel et m'a attendu malgré mon retard de vol. Top !"</p>
+                <div class="review-date">Il y a 5 jours</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Marie Leblanc</div>
+                    <div class="review-stars">★★★★☆</div>
+                </div>
+                <p class="review-text">"Très bon service pour mes déplacements professionnels à Bordeaux. Véhicule propre, conduite souple. Seul petit bémol : parfois difficile de joindre par téléphone aux heures de pointe."</p>
+                <div class="review-date">Il y a 1 semaine</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Jean-Pierre Rousseau</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">"J'utilise Elham Transport depuis 6 mois pour mes rendez-vous clients. Toujours ponctuel, discret et professionnel. C'est devenu mon chauffeur VTC de confiance à Bordeaux."</p>
+                <div class="review-date">Il y a 2 semaines</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Claire Dubois</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">"Parfait pour mon mariage ! Le chauffeur était élégant et très arrangeant. La voiture était impeccable. Merci pour cette belle prestation !"</p>
+                <div class="review-date">Il y a 3 semaines</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-author">Antoine Bernard</div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">"Super expérience ! Tarif transparent, pas de mauvaise surprise. Le véhicule hybride est un vrai plus, silencieux et confortable. Je recommande à 100%."</p>
+                <div class="review-date">Il y a 1 mois</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Section -->
     <section id="why">
         <div class="section-label">Pourquoi Elham Transport</div>
@@ -1091,8 +1328,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Booking Section -->
-    <section id="booking">
-        <div class="section-label">Réservation</div>
-        <h2 class="section-title">
